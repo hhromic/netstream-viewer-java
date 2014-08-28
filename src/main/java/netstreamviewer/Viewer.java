@@ -1,5 +1,6 @@
 package netstreamviewer;
 
+import java.awt.HeadlessException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -56,13 +57,18 @@ public class Viewer {
         graph.setAttribute("ui.title", GRAPH_TITLE);
         graph.setAttribute("ui.stylesheet", String.format("url('%s')", STYLE_FILE));
         applyProperties(graph, properties);
-        graph.display();
+        try {
+            graph.display();
+        } catch (HeadlessException e) {
+            System.err.println("error: this program requires a display device to run.");
+            System.exit(-1);
+        }
 
         // Initialize the NetStream receiver
         System.err.println("Initializing NetStream receiver ...");
         try {
             if (!properties.containsKey("network.port")) {
-                System.err.println("error: the network.port property was not found.");
+                System.err.println("error: the property 'network.port' was not found.");
                 System.exit(-1);
             }
             final NetStreamReceiver receiver = new NetStreamReceiver("0.0.0.0", Integer.parseInt((String)properties.get("network.port")));
