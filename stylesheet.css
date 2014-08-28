@@ -1,0 +1,15 @@
+graph {}
+
+node {
+  text-alignment: under;
+  text-background-mode: plain;
+  text-size: 10;
+  fill-color: rgb(56,93,138);
+}
+
+edge {
+  text-alignment: along;
+  text-background-mode: plain;
+  text-size: 8;
+  fill-color: rgb(192,192,192);
+}
