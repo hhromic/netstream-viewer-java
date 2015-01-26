@@ -19,18 +19,19 @@ import org.graphstream.stream.thread.ThreadProxyPipe;
  * Main viewer class.
  *
  * @author Hugo Hromic
+ * @since 1.0
  */
 public class Viewer {
-    /** Default graph window title */
+    /** Default graph window title (value: {@code Live NetStream Graph}) */
     public static String GRAPH_TITLE = "Live NetStream Graph";
 
-    /** Default stylesheet filename */
+    /** Default stylesheet filename (value: {@code stylesheet.css}) */
     public static String STYLE_FILE = "stylesheet.css";
 
-    /** Default properties file path */
+    /** Default properties file path (value: {@code viewer.properties}) */
     public static Path PROPERTIES_PATH = Paths.get("viewer.properties");
 
-    /** Default charset for the properties file */
+    /** Default charset for the properties file (value: {@link StandardCharsets#UTF_8}) */
     public static Charset DEFAULT_CHARSET = StandardCharsets.UTF_8;
 
     /**
