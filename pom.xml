@@ -4,7 +4,7 @@
   <!--  Project coordinates -->
   <groupId>netstreamviewer</groupId>
   <artifactId>netstream-viewer</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
 
   <!--  Project data -->
   <name>GraphStream-based NetStream Live Viewer</name>
